@@ -2,7 +2,10 @@
 	common css sample.
 */
 #local_video{
-	display:none; 
+/*	display:none; */
+	width:960px;
+	height:1280px;
+	background-color:#222222;
 }
 
 #screen{
