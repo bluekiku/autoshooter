@@ -227,7 +227,7 @@ function fSetting() {
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
-        _gString('Setting');
+        _gString('Setting test');
 // <<<DDDD
 // <<RRRR
    	_gEndtabledata() ; _gEndtablerow() ;
