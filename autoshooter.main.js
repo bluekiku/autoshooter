@@ -70,7 +70,7 @@ function fMainPage() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('5.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
@@ -125,7 +125,7 @@ function fAutoshoot() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('5.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
@@ -174,7 +174,7 @@ function fDisplay() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('5.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
@@ -223,7 +223,7 @@ function fSetting() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('5.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
