@@ -46,7 +46,7 @@ var canvas = document.getElementById('canvas');
     canvas.style.visibility = 'hidden' ;
     dtStarttime = new Date() ;
 
-	_startmainloop(fMainloop) ;
+//	_startmainloop(fMainloop) ;
 }
 
 function fMainloop() {
