@@ -246,8 +246,19 @@ function fSetting() {
 	    _gNewline() ;
 		_gInputtext('interval',nInterval.toString(),30,255,_gStylefontsize('1.0')) ;
 	    _gNewline() ;
+// <<<DDDD
+// <<RRRR
+   	_gEndtabledata() ; _gEndtablerow() ;
+// >>RRRR
+// >>>DDDD
+	_gStarttablerow() ;	_gStarttabledata('align=center') ;
 		_gButton('OK',true,'fOKSetting') ;
-	    _gNewline() ;
+// <<<DDDD
+// <<RRRR
+   	_gEndtabledata() ; _gEndtablerow() ;
+// >>RRRR
+// >>>DDDD
+	_gStarttablerow() ;	_gStarttabledata('align=center') ;
 		_gButton('Return',true,'fJumpPage','0') ;
 // <<<DDDD
 // <<RRRR
