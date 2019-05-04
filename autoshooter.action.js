@@ -19,12 +19,23 @@ function fCameraonoff() {
 function fStartcamera() {
     var video = document.getElementById('local_video');
     var lStream;
-
+    const medias = {
+//  audio: false,
+		video: {
+    		facingMode: {
+			exact: "environment" // リアカメラにアクセス
+			}
+		}
+	};
 	fCanvasresize(nCmrwidth,nCmrheight) ;
-    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    navigator.mediaDevices.getUserMedia(medias)
     .then(function (stream) { // success
-      lStream = stream;
+		video.srcObject = stream;
+		video.play();
+		streaming = true;
+/*      lStream = stream;
       video.src = window.URL.createObjectURL(lStream);
+*/
     }).catch(function (error) { // error
       console.error('mediaDevice.getUserMedia() error:', error);
       return;
@@ -47,7 +58,10 @@ function fStopcamera() {
     var video = document.getElementById('local_video');
 
 	_stopmainloop() ;
-    video.src = null ;
+//    video.src = null ;
+	streaming = false;
+	video.stop();
+	video.srcObject = null;
     bOncamera = false ;
 	fCanvasresize(0,0) ;
 }
