@@ -29,6 +29,8 @@ function fStartcamera() {
 	};
 	fCanvasresize(nCmrwidth,nCmrheight) ;
 if (navigator.mediaDevices.getUserMedia){
+var dt = new Date() ;
+alert(dt.toString()) ;
     navigator.mediaDevices.getUserMedia(medias)
     .then(function (stream) { // success
 		video.srcObject = stream;
@@ -42,6 +44,7 @@ if (navigator.mediaDevices.getUserMedia){
       return;
     });
 }
+alert('2') ;
     bOncamera = true ;
     bVisibility = false ;
 var canvas = document.getElementById('canvas');
