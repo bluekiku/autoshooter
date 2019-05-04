@@ -17,14 +17,14 @@ function fCameraonoff() {
 }
 
 function fStartcamera() {
-    var localVideo = document.getElementById('local_video');
-    var localStream;
+    var video = document.getElementById('local_video');
+    var lStream;
 
 	fCanvasresize(nCmrwidth,nCmrheight) ;
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function (stream) { // success
-      localStream = stream;
-      localVideo.src = window.URL.createObjectURL(localStream);
+      lStream = stream;
+      video.src = window.URL.createObjectURL(lStream);
     }).catch(function (error) { // error
       console.error('mediaDevice.getUserMedia() error:', error);
       return;
@@ -44,10 +44,10 @@ function fMainloop() {
 }
 
 function fStopcamera() {
-    var localVideo = document.getElementById('local_video');
+    var video = document.getElementById('local_video');
 
 	_stopmainloop() ;
-    localVideo.src = null ;
+    video.src = null ;
     bOncamera = false ;
 	fCanvasresize(0,0) ;
 }
@@ -55,11 +55,11 @@ function fStopcamera() {
 function fCamerarefresh() {
 if (bOncamera) {
 	var canvas = document.getElementById('canvas');
-    var localVideo = document.getElementById('local_video');
+    var video = document.getElementById('local_video');
 	var context = canvas.getContext("2d") ;
     var dtCur = new Date() ;
 
-	context.drawImage(localVideo, 0, 0, nCmrwidth, nCmrheight);
+	context.drawImage(video, 0, 0, nCmrwidth, nCmrheight);
 // print date time
     context.fillStyle = 'rgb(127,127,127)' ;
     context.fillRect(0,0,250,20) ;
