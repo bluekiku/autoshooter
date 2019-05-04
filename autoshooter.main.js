@@ -227,7 +227,7 @@ function fSetting() {
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
-        _gString('Setting test');
+        _gString('Setting');
 // <<<DDDD
 // <<RRRR
    	_gEndtabledata() ; _gEndtablerow() ;
@@ -236,8 +236,7 @@ function fSetting() {
 	_gStarttablerow() ;	_gStarttabledata('align=center') ;
 	    _gString('Burst count') ;
 	    _gNewline() ;
-//		_gInputtext('burst',nBurstcount.toString(),30,255,_gStylefontsize('1.0')) ;
-		_gInputtext('burst',nBurstcount.toString(),30,255) ;
+		_gInputtext('burst',nBurstcount.toString(),30,255,_gStylefontsize('1.0')) ;
 	    _gNewline() ;
 	    _gString('Shoot count') ;
 	    _gNewline() ;
@@ -245,7 +244,7 @@ function fSetting() {
 	    _gNewline() ;
 	    _gString('Interval time (sec)') ;
 	    _gNewline() ;
-		_gInputtext('interval',nInterval.toString(),30,255,_gStylefontsize('1.5')) ;
+		_gInputtext('interval',nInterval.toString(),30,255,_gStylefontsize('1.0')) ;
 	    _gNewline() ;
 		_gButton('OK',true,'fOKSetting') ;
 	    _gNewline() ;
