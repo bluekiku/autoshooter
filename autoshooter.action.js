@@ -29,8 +29,6 @@ function fStartcamera() {
 	};
 	fCanvasresize(nCmrwidth,nCmrheight) ;
 if (navigator.mediaDevices.getUserMedia){
-var dt = new Date() ;
-alert(dt.toString()) ;
     navigator.mediaDevices.getUserMedia(medias)
     .then(function (stream) { // success
 		video.srcObject = stream;
@@ -43,8 +41,9 @@ alert(dt.toString()) ;
       console.error('mediaDevice.getUserMedia() error:', error);
       return;
     });
+} else {
+	_gMessage("Error: Cannot find getUserMedia.") ;
 }
-alert('2') ;
     bOncamera = true ;
     bVisibility = false ;
 var canvas = document.getElementById('canvas');
