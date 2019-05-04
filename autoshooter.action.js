@@ -59,8 +59,8 @@ function fStopcamera() {
 
 	_stopmainloop() ;
 //    video.src = null ;
-	streaming = false;
-	video.stop();
+//	streaming = false;
+//	video.stop();
 	video.srcObject = null;
     bOncamera = false ;
 	fCanvasresize(0,0) ;
