@@ -27,6 +27,7 @@ function fStartcamera() {
 			}
 		}
 	};
+	nCount = 0 ;
 	fCanvasresize(nCmrwidth,nCmrheight) ;
 if (navigator.mediaDevices.getUserMedia){
     navigator.mediaDevices.getUserMedia(medias)
@@ -89,7 +90,8 @@ if (bOncamera) {
     if (dtCur-dtStarttime >= nInterval*1000) {
         // timeup. start burst mode.
         bBurstmode = true ;
-        nCount = 0 ;
+        nBCount = 0 ;
+        nCount++ ;
         dtStarttime = dtCur ;
         dtBurststarttime = dtCur ;
     }
@@ -97,12 +99,15 @@ if (bOncamera) {
         if (dtCur-dtBurststarttime >= 100) {
             // Burst time up. 100ms.
             fCopyimagetotable() ;
-            if (++nCount < nBurstcount) {
+            if (++nBCount < nBurstcount) {
                 // once more.
                 dtBurststarttime = dtCur ;
             } else {
                 // count up.
                 bBurstmode = false ;
+                if (nCount >= nCountlimit) {
+					fStopcamera() ;
+				}
             }
         }
     }

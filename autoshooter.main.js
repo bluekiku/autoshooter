@@ -18,6 +18,7 @@ var dtStarttime ;
 var bBurstmode = false ;
 var dtBurststarttime ;
 var nCount = 0 ;
+var nBCount = 0 ;
 
 var tImg = _tblCreate(['imgstr','flg']) ;
 
@@ -234,7 +235,7 @@ function fSetting() {
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ;	_gStarttabledata('align=center') ;
-	    _gString('Burst count') ;
+	    _gString('Burst shots') ;
 	    _gNewline() ;
 		_gInputtext('burst',nBurstcount.toString(),30,255,_gStylefontsize('1.0')) ;
 	    _gNewline() ;
