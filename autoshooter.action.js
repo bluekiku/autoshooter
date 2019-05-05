@@ -39,7 +39,7 @@ if (navigator.mediaDevices.getUserMedia){
       video.src = window.URL.createObjectURL(lStream);
 */
     }).catch(function (error) { // error
-      console.error('mediaDevice.getUserMedia() error:', error);
+      _gMessage('mediaDevice.getUserMedia() error:'+error.toString());
       return;
     });
 } else {
@@ -107,6 +107,7 @@ if (bOncamera) {
                 bBurstmode = false ;
                 if (nCount >= nCountlimit) {
 					fStopcamera() ;
+					_gRefresh() ;
 				}
             }
         }
