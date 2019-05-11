@@ -3,6 +3,7 @@
 // tag:variables.
 //
 
+var sVer = '1.01i' ;
 var _debug = false ;
 
 var nCmrwidth = 960 ;
@@ -71,11 +72,11 @@ function fMainPage() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('1.2')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
-        _gString('Main menu');
+        _gString('Main ('+sVer+')');
 // <<<DDDD
 // <<RRRR
    	_gEndtabledata() ; _gEndtablerow() ;
@@ -126,7 +127,7 @@ function fAutoshoot() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('1.2')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
@@ -175,7 +176,7 @@ function fDisplay() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('1.2')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
@@ -224,7 +225,7 @@ function fSetting() {
     _gNewline() ;
     _gStartform('form1');
 // >TTTT
-	_gStarttable(0,'width=100%'+_gStylefontsize('3.0')) ;
+	_gStarttable(0,'width=100%'+_gStylefontsize('1.2')) ;
 // >>RRRR
 // >>>DDDD
 	_gStarttablerow() ; _gStarttabledata('align=center') ;
